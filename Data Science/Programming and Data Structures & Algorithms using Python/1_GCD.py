@@ -29,17 +29,18 @@ def gcd(m,n):
 Program is a sequence of steps.
 Some steps are repeated while some are executed conditionally.
 
-takes time proportional to number
+Naive algorithm takes time proportional to number
 '''
 
 # *******************************************
 
 '''
 Why not a single scan from 1 to max(m,n)?
-    For each i in 1 to max(m.n), add i to fm if i divides m and add i to fn if i divides n
+    For each i in 1 to max(m,n), add i to fm if i divides m and add i to fn if i divides n
 Why compute two lists and then compare them?
     For each i in 1 to max(m,n), if i divides m and i also divides n, then add i to cf.
 Any common factor must be less than min(m,n)
+    Therefore we use min instead of max
 '''
 
 def gcd2(m,n):
